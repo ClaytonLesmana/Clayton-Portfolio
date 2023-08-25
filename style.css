@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+
+  .typing-animation{
+    /* display: inline-block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container{
+    display: inline-block;
+  }
+
+  /* .text{
+    font-size: 2em;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: 2px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+      typing 2s steps(18),
+      cursor .4 step-end infinite alterate;
+  } */
+
+  .text {
+    /* border-right: 2px solid; */
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+      typing 4s steps(40) forwards, /*Adjust total duration*/
+      cursor .6s infinite;
+  }
+
+  /* cursor blinking */
+  @keyframes cursor {
+    0%, 100% { border-color: transparent }
+    50% { border-color: black; }
+  }
+
+  /* typing animation */
+  /* @keyframes typing {
+    from { max-width: 0; }
+    to { max-width: 580px; }
+  } */
+  
+
+  .line__1,
+  .line__2 {
+    white-space: nowrap; /* keep text in one line */
+    overflow: hidden; /* hide text behind the cursor */
+    margin: 0.5rem auto;
+    font-family: "Major Mono Display", monospace;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  @keyframes animated-cursor__1 {
+    from {
+      border-right-color: rgba(17, 17, 17, 0.9);
+    }
+    to {
+      border-right-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @keyframes animated-cursor__2 {
+    from {
+      border-right-color: rgba(17, 17, 17, 0.9);
+    }
+    to {
+      border-right-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .line__1 {
+    border-right: 2px solid rgba(17, 17, 17, 0.9);
+    /* define animation types for text + cursor */
+    animation: 
+      animated-text__1 6s steps(30, end) 1s 1 normal both,
+      animated-cursor__1 900ms steps(30, end) 8;
+  }
+
+  .line__2 {
+    border-right: 2px solid rgba(17, 17, 17, 0.9);
+    /* define animation types for text + cursor */
+    animation:
+      animated-text__2 5s steps(30, end) 1s 1 normal both,
+      animated-cursor__2 900ms steps(30, end) infinite;
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+  }
+
+
+
+  @keyframes animated-text__1 {
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 580px;
+    }
+  }
+
+  @keyframes animated-text__2 {
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 580px;
+   }
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  section {
+    margin: 20px;
+  }
+  
+  
+
+  .footer-copyright{
+    color: #f0f0f0;
+    margin: 25px 0 0 0;
+  } 
+  .arrow-up{
+    bottom: 20%; /* Adjust this value to move the arrow up or down */
+    right: 50%; /* Adjust this value to move the arrow left or right */
+    transform: translateX(50%); /* This is to center the arrow */
+    color: #fff;
+    font-size: 45px;
+  }
+
+  /* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  } */
+
+  /* footer animation and display */
+
+  footer{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    padding: 70px 0 50px 0;
+    place-items: center;
+    /* background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%); */
+    background-color: #111;
+  }
+
+
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .wrapper .button{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    /* float: left; */
+    margin: 10px 25px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:hover{
+    width: 200px;
+  }
+  .wrapper .button .icon{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(1):hover .icon{
+    background: #4267B2;
+  }
+  .wrapper .button:nth-child(2):hover .icon{
+    background: #1DA1F2;
+  }
+  .wrapper .button:nth-child(3):hover .icon{
+    background: #E1306C;
+  }
+  .wrapper .button:nth-child(4):hover .icon{
+    background: #333;
+  }
+
+  .wrapper .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:hover .icon i{
+    color: #fff;
+  }
+  .wrapper .button span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(1) span{
+    color: #4267B2;
+  }
+  .wrapper .button:nth-child(2) span{
+    color: #1DA1F2;
+  }
+  .wrapper .button:nth-child(3) span{
+    color: #E1306C;
+  }
+  .wrapper .button:nth-child(4) span{
+    color: #333;
+  }
+  .wrapper .button:nth-child(5) span{
+    color: #ff0000;
+  }
+
+   /* #scroll-to-top {
+    background: #e31b6d;
+    /* cursor: pointer; */
+    font-size: 30pt;
+    height: 50px;
+    left: 0;
+    line-height: 40pt;
+    margin: 0 auto;
+    /* position: absolute; */
+    right: 0;
+    top: -25px;
+    transition: background 0.5s;
+    width: 47px;
+  } */
+
+  /* #scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #111;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    z-index: 1000;
+    /* transition: background-color 0.3s ease-in-out; */
+  } */
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  #scroll-to-top i {
+    animation: bounce 1s infinite;
+  }
+
+  
